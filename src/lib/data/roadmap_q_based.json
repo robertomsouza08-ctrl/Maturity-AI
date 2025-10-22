@@ -1,0 +1,110 @@
+{
+  "version": "1.0",
+  "diagram": "roadmap_q_based",
+  "quarters": [
+    "T1",
+    "T2",
+    "T3",
+    "T4"
+  ],
+  "nodes": [
+    {
+      "id": "ARCH01",
+      "type": "group",
+      "position": {
+        "x": 40,
+        "y": 40
+      },
+      "data": {
+        "label": "T1 • Data Lake/Warehouse + dbt"
+      }
+    },
+    {
+      "id": "INT01",
+      "type": "default",
+      "position": {
+        "x": 420,
+        "y": 40
+      },
+      "data": {
+        "label": "T1 • Conectores ERP/POS/WMS/GA4"
+      }
+    },
+    {
+      "id": "D01",
+      "type": "default",
+      "position": {
+        "x": 720,
+        "y": 40
+      },
+      "data": {
+        "label": "T1 • MDM Catálogo"
+      }
+    },
+    {
+      "id": "D02",
+      "type": "default",
+      "position": {
+        "x": 980,
+        "y": 40
+      },
+      "data": {
+        "label": "T1 • CDP/CRM + Consent"
+      }
+    },
+    {
+      "id": "P02",
+      "type": "default",
+      "position": {
+        "x": 1240,
+        "y": 40
+      },
+      "data": {
+        "label": "T1 • CI/CD Modelos"
+      }
+    },
+    {
+      "id": "PR01",
+      "type": "default",
+      "position": {
+        "x": 620,
+        "y": 180
+      },
+      "data": {
+        "label": "T2 • Demanda (Piloto)"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "r1",
+      "source": "ARCH01",
+      "target": "INT01"
+    },
+    {
+      "id": "r2",
+      "source": "INT01",
+      "target": "D01"
+    },
+    {
+      "id": "r3",
+      "source": "ARCH01",
+      "target": "D02"
+    },
+    {
+      "id": "r4",
+      "source": "ARCH01",
+      "target": "P02"
+    },
+    {
+      "id": "r8",
+      "source": "P02",
+      "target": "PR01"
+    },
+    {
+      "id": "r9",
+      "source": "D01",
+      "target": "PR01"
+    }
+  ]
+}

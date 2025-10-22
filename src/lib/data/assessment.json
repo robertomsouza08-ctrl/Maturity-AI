@@ -1,0 +1,221 @@
+{
+  "version": "1.0",
+  "industry": "retail",
+  "scale": {
+    "min": 1,
+    "max": 5,
+    "labels": {
+      "1": "Inexistente/Ad-hoc",
+      "3": "Definido/Em execução",
+      "5": "Otimizado/Data-driven"
+    }
+  },
+  "sections": [
+    {
+      "id": "strategy",
+      "title": "Estratégia e OKRs de IA/ML",
+      "weight": 0.1,
+      "questions": [
+        {
+          "id": "strategy_alignment",
+          "text": "Existe estratégia formal de dados/IA alinhada a objetivos (margem, ruptura, LTV, NPS)?",
+          "type": "scale",
+          "evidence": "Documento de estratégia, OKRs, apresentações executivas"
+        },
+        {
+          "id": "use_case_governance",
+          "text": "Há governança de casos de uso (comitê, priorização, metas de valor)?",
+          "type": "scale",
+          "evidence": "Ata do comitê, portfólio priorizado, owners"
+        },
+        {
+          "id": "okrs_linked",
+          "text": "OKRs trimestrais vinculados a KPIs de varejo (GMV, margem, OTIF, NPS)?",
+          "type": "scale",
+          "evidence": "OKRs, dashboards de business"
+        }
+      ]
+    },
+    {
+      "id": "data_integration",
+      "title": "Dados e Integração Omnicanal",
+      "weight": 0.2,
+      "questions": [
+        {
+          "id": "product_catalog",
+          "text": "Catálogo de produtos unificado (atributos, GTIN, hierarquia) e enriquecido?",
+          "type": "scale",
+          "evidence": "Catálogo mestre, MDM, data model"
+        },
+        {
+          "id": "customer_360",
+          "text": "Golden record de cliente (CDP/CRM), consentimento LGPD e unificação online/offline?",
+          "type": "scale",
+          "evidence": "CDP, políticas de consentimento, mapeamento de IDs"
+        },
+        {
+          "id": "inventory_rt",
+          "text": "Estoque/logística quase em tempo real por loja/CD e canal?",
+          "type": "scale",
+          "evidence": "Streams, SLAs de atualização, dashboards de acurácia"
+        },
+        {
+          "id": "journey_events",
+          "text": "Eventos de jornada padronizados (pageview, add-to-cart, store visits)?",
+          "type": "scale",
+          "evidence": "Esquemas GA4/Segment, contratos de eventos"
+        }
+      ]
+    },
+    {
+      "id": "data_quality_lineage",
+      "title": "Qualidade de Dados e Linhagem",
+      "weight": 0.15,
+      "questions": [
+        {
+          "id": "data_slas",
+          "text": "SLAs de qualidade para preço, estoque, pedidos, clientes?",
+          "type": "scale",
+          "evidence": "Catálogo de SLAs, SLOs, relatórios de incidentes"
+        },
+        {
+          "id": "anomaly_recon",
+          "text": "Monitoramento de anomalias e reconciliação (pedido, pagamento, entrega)?",
+          "type": "scale",
+          "evidence": "Alertas, playbooks de reconciliação"
+        },
+        {
+          "id": "lineage_versioning",
+          "text": "Linhagem e versionamento para dados críticos (preço, promo, sortimento)?",
+          "type": "scale",
+          "evidence": "Ferramenta de lineage, versionamento dbt/git"
+        }
+      ]
+    },
+    {
+      "id": "platform_mlops",
+      "title": "Plataforma e MLOps",
+      "weight": 0.15,
+      "questions": [
+        {
+          "id": "feature_store",
+          "text": "Feature store com features de varejo (RFV, afinidade, elasticidade)?",
+          "type": "scale",
+          "evidence": "Catálogo de features, pipelines"
+        },
+        {
+          "id": "cicd_models",
+          "text": "CI/CD para modelos e inferência batch/near real-time?",
+          "type": "scale",
+          "evidence": "Pipelines, ambientes, esteiras"
+        },
+        {
+          "id": "model_observability",
+          "text": "Observabilidade (drift, performance por canal/loja)?",
+          "type": "scale",
+          "evidence": "Dashboards de monitoramento, SLAs de modelos"
+        }
+      ]
+    },
+    {
+      "id": "process_operations",
+      "title": "Processos e Operações",
+      "weight": 0.2,
+      "questions": [
+        {
+          "id": "demand_planning",
+          "text": "Planejamento de demanda e reabastecimento automatizados por SKU-Local?",
+          "type": "scale",
+          "evidence": "Ferramentas, acurácia de previsão, KPIs de ruptura"
+        },
+        {
+          "id": "pricing_promo",
+          "text": "Pricing e promo com regras/modelos (elasticidade, canibalização)?",
+          "type": "scale",
+          "evidence": "Regras, modelos, histórico de uplift"
+        },
+        {
+          "id": "store_execution",
+          "text": "Execução de loja: planograma, auditoria, ruptura em tempo quase real?",
+          "type": "scale",
+          "evidence": "Sistemas de auditoria, fotos, checklists"
+        },
+        {
+          "id": "cx_post_sale",
+          "text": "Atendimento e pós-venda com triagem inteligente e automações?",
+          "type": "scale",
+          "evidence": "ITSM/CRM, tempos de resposta, bots"
+        }
+      ]
+    },
+    {
+      "id": "people_skills",
+      "title": "Pessoas e Competências",
+      "weight": 0.1,
+      "questions": [
+        {
+          "id": "domain_squads",
+          "text": "Squads de dados por domínio (Comercial, Supply, CRM, Ecom)?",
+          "type": "scale",
+          "evidence": "Organograma, papéis, RACI"
+        },
+        {
+          "id": "enablement",
+          "text": "Capacitação para compradores/gerentes/logística usarem insights?",
+          "type": "scale",
+          "evidence": "Trilhas, participação, certificações"
+        },
+        {
+          "id": "product_ownership",
+          "text": "Product ownership para casos de uso de dados/IA?",
+          "type": "scale",
+          "evidence": "Backlog, owners, OKRs por produto de dados"
+        }
+      ]
+    },
+    {
+      "id": "compliance_risk",
+      "title": "Compliance e Risco",
+      "weight": 0.05,
+      "questions": [
+        {
+          "id": "lgpd_consent",
+          "text": "Gestão de consentimento, retenção e minimização de dados (LGPD)?",
+          "type": "scale",
+          "evidence": "Plataforma de consentimento, políticas"
+        },
+        {
+          "id": "dpia_models",
+          "text": "DPIA/PIA para modelos que usam dados pessoais?",
+          "type": "scale",
+          "evidence": "Relatórios DPIA, registros de risco"
+        },
+        {
+          "id": "pci_fraud",
+          "text": "Segregação de dados de pagamento (PCI) e antifraude integrado?",
+          "type": "scale",
+          "evidence": "Arquitetura PCI, contratos antifraude"
+        }
+      ]
+    },
+    {
+      "id": "finance_portfolio",
+      "title": "Finanças e Portfólio",
+      "weight": 0.05,
+      "questions": [
+        {
+          "id": "business_cases",
+          "text": "Business cases padronizados (baseline, uplift, payback) por caso de uso?",
+          "type": "scale",
+          "evidence": "Templates, aprovações, histórico"
+        },
+        {
+          "id": "prioritization",
+          "text": "Priorização por valor/complexidade (WSJF/ICE) e revisão trimestral?",
+          "type": "scale",
+          "evidence": "Matriz de priorização, atas de revisão"
+        }
+      ]
+    }
+  ]
+}

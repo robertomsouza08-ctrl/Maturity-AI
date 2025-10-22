@@ -1,0 +1,44 @@
+{
+  "version": "1.0",
+  "chart": "bar_investment_by_category",
+  "option": {
+    "title": {
+      "text": "Investimentos por Categoria (CAPEX, USD)"
+    },
+    "tooltip": {
+      "trigger": "axis"
+    },
+    "xAxis": {
+      "type": "category",
+      "data": [
+        "Dados",
+        "Plataforma/MLOps",
+        "Qualidade",
+        "Casos de Uso",
+        "Pessoas",
+        "Compliance"
+      ]
+    },
+    "yAxis": {
+      "type": "value"
+    },
+    "series": [
+      {
+        "name": "Base",
+        "type": "bar",
+        "data": [
+          180000,
+          220000,
+          90000,
+          350000,
+          70000,
+          90000
+        ],
+        "itemStyle": {
+          "color": "#3b82f6"
+        }
+      }
+    ],
+    "legend": {}
+  }
+}

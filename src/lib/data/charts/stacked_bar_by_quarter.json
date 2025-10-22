@@ -1,0 +1,93 @@
+{
+  "version": "1.0",
+  "chart": "stacked_bar_by_quarter",
+  "option": {
+    "title": {
+      "text": "Desembolso por Trimestre (USD)"
+    },
+    "tooltip": {
+      "trigger": "axis",
+      "axisPointer": {
+        "type": "shadow"
+      }
+    },
+    "legend": {
+      "data": [
+        "Fundacionais",
+        "Dados/Qualidade",
+        "Plataforma/MLOps",
+        "Casos de Uso",
+        "Pessoas/Compliance"
+      ]
+    },
+    "xAxis": {
+      "type": "category",
+      "data": [
+        "T1",
+        "T2",
+        "T3",
+        "T4"
+      ]
+    },
+    "yAxis": {
+      "type": "value"
+    },
+    "series": [
+      {
+        "name": "Fundacionais",
+        "type": "bar",
+        "stack": "total",
+        "data": [
+          250000,
+          80000,
+          30000,
+          20000
+        ]
+      },
+      {
+        "name": "Dados/Qualidade",
+        "type": "bar",
+        "stack": "total",
+        "data": [
+          120000,
+          90000,
+          40000,
+          30000
+        ]
+      },
+      {
+        "name": "Plataforma/MLOps",
+        "type": "bar",
+        "stack": "total",
+        "data": [
+          90000,
+          110000,
+          60000,
+          30000
+        ]
+      },
+      {
+        "name": "Casos de Uso",
+        "type": "bar",
+        "stack": "total",
+        "data": [
+          60000,
+          180000,
+          260000,
+          200000
+        ]
+      },
+      {
+        "name": "Pessoas/Compliance",
+        "type": "bar",
+        "stack": "total",
+        "data": [
+          30000,
+          40000,
+          40000,
+          30000
+        ]
+      }
+    ]
+  }
+}

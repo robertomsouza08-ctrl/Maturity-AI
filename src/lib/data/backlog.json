@@ -1,0 +1,123 @@
+{
+  "version": "1.0",
+  "currency": "USD",
+  "time_horizon_months": 24,
+  "initiatives": [
+    {
+      "id": "ARCH01",
+      "name": "Data Lake/Warehouse e dbt (Fundacional)",
+      "domain": "Plataforma",
+      "dependencies": [],
+      "effort": "L",
+      "capex_range": [
+        80000,
+        180000
+      ],
+      "opex_monthly_range": [
+        3000,
+        6000
+      ],
+      "outcomes": [
+        "Base unificada",
+        "Camada semântica"
+      ]
+    },
+    {
+      "id": "INT01",
+      "name": "Conectores ERP/POS/WMS/GA4",
+      "domain": "Integração",
+      "dependencies": [
+        "ARCH01"
+      ],
+      "effort": "M",
+      "capex_range": [
+        50000,
+        120000
+      ],
+      "opex_monthly_range": [
+        1500,
+        3000
+      ],
+      "outcomes": [
+        "Ingestão confiável"
+      ]
+    },
+    {
+      "id": "D01",
+      "name": "MDM de Produto e Catálogo Unificado",
+      "domain": "Dados",
+      "dependencies": [],
+      "effort": "L",
+      "capex_range": [
+        60000,
+        120000
+      ],
+      "opex_monthly_range": [
+        1500,
+        4000
+      ],
+      "outcomes": [
+        "Catálogo único"
+      ]
+    },
+    {
+      "id": "D02",
+      "name": "CDP/CRM com Golden Record e Consentimento",
+      "domain": "Dados",
+      "dependencies": [],
+      "effort": "L",
+      "capex_range": [
+        80000,
+        150000
+      ],
+      "opex_monthly_range": [
+        3000,
+        6000
+      ],
+      "outcomes": [
+        "Cliente 360"
+      ]
+    },
+    {
+      "id": "P02",
+      "name": "CI/CD de Modelos e Ambientes",
+      "domain": "Plataforma/MLOps",
+      "dependencies": [],
+      "effort": "M",
+      "capex_range": [
+        40000,
+        90000
+      ],
+      "opex_monthly_range": [
+        1000,
+        2000
+      ],
+      "outcomes": [
+        "Implantações seguras"
+      ]
+    },
+    {
+      "id": "PR01",
+      "name": "Previsão de Demanda por SKU-Local (Piloto)",
+      "domain": "Processos - Supply",
+      "dependencies": [
+        "D01",
+        "INT01",
+        "P02"
+      ],
+      "effort": "L",
+      "capex_range": [
+        80000,
+        200000
+      ],
+      "opex_monthly_range": [
+        2000,
+        4000
+      ],
+      "outcomes": [
+        "-10–30% ruptura"
+      ]
+    }
+  ],
+  "prioritization_hint": "Comece por ARCH01, INT01, D01, D02, P02 e PR01"
+}

@@ -1,0 +1,94 @@
+{
+  "version": "1.0",
+  "chart": "radar_maturity",
+  "option": {
+    "title": {
+      "text": "Maturidade por Dimensão"
+    },
+    "legend": {
+      "data": [
+        "Atual",
+        "Meta (12m)"
+      ]
+    },
+    "radar": {
+      "indicator": [
+        {
+          "name": "Estratégia/OKRs",
+          "max": 5
+        },
+        {
+          "name": "Dados/Integração",
+          "max": 5
+        },
+        {
+          "name": "Qualidade/Linhagem",
+          "max": 5
+        },
+        {
+          "name": "Plataforma/MLOps",
+          "max": 5
+        },
+        {
+          "name": "Processos/Operações",
+          "max": 5
+        },
+        {
+          "name": "Pessoas/Competências",
+          "max": 5
+        },
+        {
+          "name": "Compliance/Risco",
+          "max": 5
+        },
+        {
+          "name": "Finanças/Portfólio",
+          "max": 5
+        }
+      ],
+      "radius": 120
+    },
+    "series": [
+      {
+        "type": "radar",
+        "data": [
+          {
+            "value": [
+              2.5,
+              2.2,
+              2.0,
+              2.1,
+              2.3,
+              2.4,
+              2.8,
+              2.0
+            ],
+            "name": "Atual",
+            "areaStyle": {
+              "opacity": 0.2
+            }
+          },
+          {
+            "value": [
+              3.5,
+              3.6,
+              3.4,
+              3.5,
+              3.6,
+              3.2,
+              3.5,
+              3.0
+            ],
+            "name": "Meta (12m)",
+            "areaStyle": {
+              "opacity": 0.1
+            }
+          }
+        ]
+      }
+    ],
+    "tooltip": {
+      "trigger": "item"
+    }
+  }
+}

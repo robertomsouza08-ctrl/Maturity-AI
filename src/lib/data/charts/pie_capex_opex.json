@@ -1,0 +1,38 @@
+{
+  "version": "1.0",
+  "chart": "pie_capex_opex",
+  "option": {
+    "title": {
+      "text": "CAPEX vs OPEX (12m)",
+      "left": "center"
+    },
+    "tooltip": {
+      "trigger": "item"
+    },
+    "legend": {
+      "orient": "vertical",
+      "left": "left"
+    },
+    "series": [
+      {
+        "name": "Investimento",
+        "type": "pie",
+        "radius": "55%",
+        "center": [
+          "50%",
+          "60%"
+        ],
+        "data": [
+          {
+            "value": 1000000,
+            "name": "CAPEX"
+          },
+          {
+            "value": 180000,
+            "name": "OPEX (12m)"
+          }
+        ]
+      }
+    ]
+  }
+}

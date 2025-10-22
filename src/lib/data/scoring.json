@@ -1,0 +1,65 @@
+{
+  "version": "1.0",
+  "method": "weighted_average",
+  "scale_mapping": {
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 5
+  },
+  "weights": {
+    "strategy": 0.1,
+    "data_integration": 0.2,
+    "data_quality_lineage": 0.15,
+    "platform_mlops": 0.15,
+    "process_operations": 0.2,
+    "people_skills": 0.1,
+    "compliance_risk": 0.05,
+    "finance_portfolio": 0.05
+  },
+  "dimension_score_rule": "mean_of_questions",
+  "overall_score_rule": "sum(weight_i * dimension_i)",
+  "maturity_levels": [
+    {
+      "level": 1,
+      "range": [
+        1.0,
+        1.9
+      ],
+      "label": "Inicial"
+    },
+    {
+      "level": 2,
+      "range": [
+        2.0,
+        2.9
+      ],
+      "label": "Repetível"
+    },
+    {
+      "level": 3,
+      "range": [
+        3.0,
+        3.4
+      ],
+      "label": "Definido"
+    },
+    {
+      "level": 4,
+      "range": [
+        3.5,
+        4.2
+      ],
+      "label": "Gerenciado"
+    },
+    {
+      "level": 5,
+      "range": [
+        4.3,
+        5.0
+      ],
+      "label": "Otimizado"
+    }
+  ]
+}

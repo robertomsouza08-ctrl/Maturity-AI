@@ -1,0 +1,156 @@
+{
+  "version": "1.0",
+  "diagram": "process_map_as_is",
+  "layout": "left-to-right",
+  "nodes": [
+    {
+      "id": "n_customer",
+      "type": "input",
+      "position": {
+        "x": 40,
+        "y": 40
+      },
+      "data": {
+        "label": "Cliente"
+      }
+    },
+    {
+      "id": "n_browse",
+      "type": "default",
+      "position": {
+        "x": 260,
+        "y": 40
+      },
+      "data": {
+        "label": "Navega/Cataloga",
+        "owner": "Ecom"
+      }
+    },
+    {
+      "id": "n_cart",
+      "type": "default",
+      "position": {
+        "x": 500,
+        "y": 40
+      },
+      "data": {
+        "label": "Carrinho",
+        "owner": "Ecom"
+      }
+    },
+    {
+      "id": "n_checkout",
+      "type": "default",
+      "position": {
+        "x": 740,
+        "y": 40
+      },
+      "data": {
+        "label": "Checkout",
+        "owner": "Ecom/PSP"
+      }
+    },
+    {
+      "id": "n_order",
+      "type": "default",
+      "position": {
+        "x": 980,
+        "y": 40
+      },
+      "data": {
+        "label": "Criação do Pedido",
+        "owner": "OMS"
+      }
+    },
+    {
+      "id": "n_alloc",
+      "type": "default",
+      "position": {
+        "x": 1220,
+        "y": 40
+      },
+      "data": {
+        "label": "Alocação Estoque",
+        "owner": "OMS/WMS"
+      }
+    },
+    {
+      "id": "n_pickpack",
+      "type": "default",
+      "position": {
+        "x": 1460,
+        "y": 40
+      },
+      "data": {
+        "label": "Picking & Packing",
+        "owner": "WMS"
+      }
+    },
+    {
+      "id": "n_ship",
+      "type": "default",
+      "position": {
+        "x": 1700,
+        "y": 40
+      },
+      "data": {
+        "label": "Expedição",
+        "owner": "WMS/TMS"
+      }
+    },
+    {
+      "id": "n_delivery",
+      "type": "default",
+      "position": {
+        "x": 1940,
+        "y": 40
+      },
+      "data": {
+        "label": "Entrega/Retirada",
+        "owner": "TMS/Loja"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e1",
+      "source": "n_customer",
+      "target": "n_browse"
+    },
+    {
+      "id": "e2",
+      "source": "n_browse",
+      "target": "n_cart"
+    },
+    {
+      "id": "e3",
+      "source": "n_cart",
+      "target": "n_checkout"
+    },
+    {
+      "id": "e4",
+      "source": "n_checkout",
+      "target": "n_order"
+    },
+    {
+      "id": "e5",
+      "source": "n_order",
+      "target": "n_alloc"
+    },
+    {
+      "id": "e6",
+      "source": "n_alloc",
+      "target": "n_pickpack"
+    },
+    {
+      "id": "e7",
+      "source": "n_pickpack",
+      "target": "n_ship"
+    },
+    {
+      "id": "e8",
+      "source": "n_ship",
+      "target": "n_delivery"
+    }
+  ]
+}
