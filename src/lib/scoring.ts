@@ -6,7 +6,8 @@ export function calculateScores(answersByDimension: Record<string, number[]>) {
   const dimScores: Record<string, number> = {};
   let overall = 0;
   for (const [dim, answers] of Object.entries(answersByDimension)) {
-    const mean = (answers as number[]).length ? (answers as number[]).reduce((a,b)=>a+b,0)/(answers as number[]).length : 0;
+    const arr = answers as number[];
+    const mean = arr.length ? arr.reduce((a,b)=>a+b,0)/arr.length : 0;
     dimScores[dim] = Number(mean.toFixed(2));
     overall += (weights[dim] || 0) * mean;
   }
